@@ -1,0 +1,8 @@
+<div class="app">
+  <app-header
+  (newCourseEvent)="setCourseObj($event)"
+  ></app-header>
+  <app-convertation
+    [coursesObj]="coursesObj"
+  ></app-convertation>
+</div>

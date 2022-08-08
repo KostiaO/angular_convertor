@@ -1,0 +1,40 @@
+
+<h3>Conver here</h3>
+
+{{ course1 }}
+
+{{ course2 }}
+
+{{ numberFromInput * coursesObj[course1 + 'To' + course2] }}
+
+<div class="convertor">
+  <div class="convertor__block--1">
+      <select
+        name="select"
+        id="select"
+        [(ngModel)]="course1"
+      >
+      <option *ngFor="let value of arraySelect" [value]="value">
+        {{value}}
+      </option>
+    </select>
+  </div>
+
+  <div class="convertor__block--2">
+    <select
+      name="select"
+      id="select"
+      [(ngModel)]="course2"
+    >
+      <option *ngFor="let value of arraySelect" [value]="value">
+        {{value}}
+      </option>
+    </select>
+
+  </div>
+
+  <input
+    type="number"
+    [(ngModel)]="numberFromInput"
+  >
+</div>
