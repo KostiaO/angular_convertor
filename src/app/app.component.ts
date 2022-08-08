@@ -15,7 +15,10 @@ export class AppComponent implements OnInit {
     EurToUah: 0,
     UsdToUah: 0,
     EurToUsd: 0,
-    UsdToEur: 0
+    UsdToEur: 0,
+    UsdToUsd: 1,
+    UahToUah: 1,
+    EurToEur: 1
   }
 
   setCourseObj(arrCourse: Array<number>) {

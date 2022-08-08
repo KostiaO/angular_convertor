@@ -1,0 +1,21 @@
+.convertor {
+  display: flex;
+  margin-top: 30px;
+}
+
+.convertor__selections {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.viewport__block {
+  display: flex;
+  gap: 50px;
+}
+
+
+.viewport__block > * {
+  border: 1px solid black;
+
+  padding: 2px;
+}

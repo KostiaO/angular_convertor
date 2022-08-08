@@ -18,4 +18,7 @@ export interface Course {
   UsdToUah: number,
   EurToUsd: number,
   UsdToEur: number,
+  UahToUah: number,
+  EurToEur: number,
+  UsdToUsd: number
 }

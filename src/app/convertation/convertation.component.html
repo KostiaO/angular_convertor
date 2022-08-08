@@ -1,14 +1,22 @@
 
 <h3>Conver here</h3>
 
-{{ course1 }}
+<div class="viewport__block">
+  <span>{{ course1 }}</span>
 
-{{ course2 }}
+  <span>To</span>
 
-{{ numberFromInput * coursesObj[course1 + 'To' + course2] }}
+  <span>{{ course2 }}</span>
+
+  <span>=</span>
+
+  <span>{{ numberFromInput * coursesObj[course1 + 'To' + course2] }}</span>
+</div>
 
 <div class="convertor">
-  <div class="convertor__block--1">
+
+  <div class="convertor__selections">
+    <div class="convertor__block--1">
       <select
         name="select"
         id="select"
@@ -31,6 +39,7 @@
       </option>
     </select>
 
+  </div>
   </div>
 
   <input
