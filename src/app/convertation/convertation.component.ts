@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Course } from '../types';
 
 type SelectType = 'Uah' | 'Eur' | 'Usd';
@@ -15,7 +14,11 @@ export class ConvertationComponent implements OnInit {
 
   @Input() coursesObj: Course;
 
-  public arraySelect: SelectType[] = ['Uah', 'Usd', 'Eur'];
+  public arraySelect1: SelectType[] = ['Uah', 'Usd', 'Eur'];
+
+  public arraySelect2: SelectType[] = ['Uah', 'Usd', 'Eur'];
+
+  public copyOfSelections: SelectType[];
 
   public course1: SelectType = 'Uah';
 
@@ -27,8 +30,17 @@ export class ConvertationComponent implements OnInit {
   constructor() {
   }
 
+  deleteProp(value: string, first: boolean): void {
+    if (first) {
+      this.arraySelect2 = this.copyOfSelections.filter(el => el !== value);
+    } else {
+      this.arraySelect1 = this.copyOfSelections.filter(el => el !== value);
+    }
+  }
+
 
   ngOnInit(): void {
+    this.copyOfSelections = [ ...this.arraySelect1 ];
   }
 
 
